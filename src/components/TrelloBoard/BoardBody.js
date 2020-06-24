@@ -1,8 +1,7 @@
 import React from "react"
 import { BsThreeDots } from "react-icons/bs"
 import styled from "styled-components"
-import Cards from "../components/Cards/Cards"
-
+import AddNewList from "../Cards/AddList"
 const BoardBody = () => {
   return (
     <>
@@ -16,9 +15,7 @@ const BoardBody = () => {
         </div>
       </TitleContainer>
       <CardHolder>
-        <Cards />
-        <Cards />
-        <Cards />
+        <AddNewList />
       </CardHolder>
     </>
   )
