@@ -2,6 +2,7 @@ import React from "react"
 import { BsThreeDots } from "react-icons/bs"
 import styled from "styled-components"
 import AddNewList from "../Cards/AddList"
+
 const BoardBody = () => {
   return (
     <>
@@ -30,9 +31,5 @@ const TitleContainer = styled.div`
 `
 
 const CardHolder = styled.div`
-  display: flex;
-`
-
-const BoardContainer = styled.div`
   display: flex;
 `
