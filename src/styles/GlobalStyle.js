@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components"
-import reset from "styled-reset"
+import { normalize } from "styled-normalize"
 
 const GlobalStyles = createGlobalStyle`
-${reset}
+${normalize}
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -25,9 +25,6 @@ ${reset}
     width: 100%;
     height: 100%;
   }
-body{
-  background:#64A6D3;
-}
 }
 `
 
