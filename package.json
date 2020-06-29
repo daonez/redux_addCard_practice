@@ -17,7 +17,8 @@
     "redux-actions": "^2.6.5",
     "redux-devtools-extension": "^2.13.8",
     "styled-components": "^5.1.1",
-    "styled-normalize": "^8.0.7"
+    "styled-normalize": "^8.0.7",
+    "uuidv4": "^6.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

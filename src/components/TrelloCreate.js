@@ -1,10 +1,9 @@
 import React, { useState } from "react"
-import TrelloForm from "./TrelloForm"
-import AddNew from "./AddNew"
+import AddList from "../containers/AddList"
+import AddNewList from "./AddNewList"
 
 const TrelloCreate = ({ list }) => {
   const [formOpen, setFormOpen] = useState(false)
-  const [text, setText] = useState("")
 
   const openForm = () => {
     setFormOpen(true)
@@ -13,21 +12,12 @@ const TrelloCreate = ({ list }) => {
     setFormOpen(false)
   }
 
-  const handleInputChange = (e) => {
-    setText({ text: e.target.value })
-  }
-
   return formOpen ? (
-    <TrelloForm name="text" text={text} onChange={handleInputChange} closeForm={closeForm}>
-      <input />
-      <div>
-        <button> ADD</button>
-      </div>
-    </TrelloForm>
+    <AddList closeForm={closeForm}></AddList>
   ) : (
-    <AddNew list={list} onClick={openForm}>
-      {list ? "Add another list" : "Add another card"}
-    </AddNew>
+    <AddNewList list={list} onClick={openForm}>
+      {"Add another list"}
+    </AddNewList>
   )
 }
 
