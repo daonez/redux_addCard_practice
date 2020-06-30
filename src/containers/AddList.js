@@ -11,11 +11,11 @@ const AddList = ({ addList, addTodo, deleteTodo, closeForm }) => {
       {addList && <AddListForm onClickAddTodo={addTodo} closeForm={closeForm} />}
       <div>
         {addList &&
-          addList.map((list) => (
+          addList.map((lists) => (
             <AddListCard
-              key={list.id}
-              id={list.id}
-              title={list.title}
+              key={lists.id}
+              id={lists.id}
+              title={lists.title}
               onClickDeleteTodo={deleteTodo}
             />
           ))}

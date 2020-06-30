@@ -1,21 +1,22 @@
 import React, { useState } from "react"
 import { uuid } from "uuidv4"
 
-const MakeCardForm = ({ onClickAddTodo, closeForm }) => {
-  const [title, setTitle] = useState("")
+const MakeCardForm = ({ onClickAddCard, closeForm }) => {
+  const [description, setDescription] = useState("")
 
-  const onChangeAddTitle = (e) => {
-    setTitle(e.target.value)
+  const onChangeDescription = (e) => {
+    setDescription(e.target.value)
   }
+
   return (
     <div>
       <textarea
-        onChange={onChangeAddTitle}
-        value={title}
+        onChange={onChangeDescription}
+        value={description}
         placeholder="Enter a title for this card..."
       />
-      <button onClick={() => onClickAddTodo({ id: uuid(), title })}> Add Card</button>
-      <button onClick={() => closeForm()}>Close</button>
+      <button onClick={() => onClickAddCard({ id: uuid(), description })}>Add Card</button>
+      <button onClick={() => closeForm}>Close</button>
     </div>
   )
 }
