@@ -3,16 +3,16 @@ import { connect } from "react-redux"
 import { deleteTodo, addTodo } from "../modules/addList"
 import { bindActionCreators } from "redux"
 import AddListCard from "../components/AddlListTodo/Cards"
-import AddListForm from "../components/AddlListTodo/MakeListForm.js.js"
+import AddCardForm from "../components/AddlListTodo/MakeCardForm"
 
 const AddList = ({ addList, addTodo, deleteTodo, closeForm }) => {
   return (
     <>
-      {addList && <AddListForm onClickAddTodo={addTodo} closeForm={closeForm} />}
+      {addList && <AddListCard onClickAddTodo={addTodo} closeForm={closeForm} />}
       <div>
         {addList &&
           addList.map((list) => (
-            <AddListCard
+            <AddCardForm
               key={list.id}
               id={list.id}
               title={list.title}
